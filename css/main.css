@@ -440,3 +440,63 @@ body::-webkit-scrollbar-thumb {
 
 .dashboard-wrapper {
   position: relative; }
+
+.shop-section {
+  padding: 1rem 3rem;
+  max-width: 105rem;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif; }
+  .shop-section__container {
+    max-width: 85%;
+    margin: 0 auto; }
+  .shop-section__heading {
+    margin: 0.8rem 0; }
+
+.esa-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 0 0 2.5rem 0; }
+
+.esa-box {
+  width: 25rem;
+  text-align: center;
+  padding: 1rem;
+  background: transparent;
+  transition: all 0.2s;
+  border-radius: 10px; }
+  .esa-box:hover {
+    -webkit-box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28);
+    -moz-box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28);
+    box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28); }
+  .esa-box__link {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .esa-box__link:hover .link-arrow {
+      transform: translateX(0.25rem); }
+  .esa-box__text {
+    color: #2b2b2b;
+    margin: 0 0.6rem;
+    font-size: 1.2rem; }
+  .esa-box .link-icon, .esa-box .icon-checklist, .esa-box .icon-profile, .esa-box .icon-money, .esa-box .icon-box, .esa-box .icon-cart, .esa-box .icon-file, .esa-box .icon-edit, .esa-box .icon-msg, .esa-box .icon-palm, .esa-box .icon-signout {
+    display: inline-block;
+    margin: 0;
+    width: 2.5rem;
+    height: 3rem;
+    background-size: 81.4%; }
+  .esa-box .bold {
+    font-weight: 500;
+    color: #333333; }
+  .esa-box sup {
+    font-size: 0.75rem;
+    padding-right: 5px; }
+
+.link-arrow {
+  transition: all 0.2s;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../img/icons/icon-arrow-right.png) no-repeat center/0.9rem; }
