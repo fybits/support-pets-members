@@ -78,3 +78,20 @@
   height: 1.5rem;
   background: url(../img/icons/icon-arrow-right.png) no-repeat center / 0.9rem;
 }
+
+//media
+@media only screen and (max-width: 601px) {
+  .esa-box {
+    padding: 1rem 0;
+  }
+  .shop-section {
+    &__container {
+      max-width: 95%;
+    }
+
+    &__heading {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+  }
+}
