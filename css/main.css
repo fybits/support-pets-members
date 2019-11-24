@@ -2,9 +2,9 @@
 .link-icon, .icon-checklist, .icon-profile, .icon-money, .icon-box, .icon-cart, .icon-file, .icon-edit, .icon-msg, .icon-palm, .icon-signout {
   display: inline-block;
   font-family: Roboto;
-  width: 1.8rem;
+  width: 2rem;
   height: 2.2rem;
-  background-size: 94.4%;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   margin-left: 1rem; }
@@ -112,7 +112,8 @@ body::-webkit-scrollbar-thumb {
 
 .left-menu-logo.large-logo {
   background: url(../img/logo.png) no-repeat center;
-  background-size: 90%; }
+  background-size: 90%;
+  padding: 3rem 16px !important; }
 
 .left-menu {
   width: 4rem;
@@ -132,6 +133,7 @@ body::-webkit-scrollbar-thumb {
     border: none; }
   .left-menu .menu-link {
     display: flex;
+    align-items: center;
     padding: 1rem 0;
     height: auto;
     border-left: 4px solid transparent;
@@ -147,22 +149,22 @@ body::-webkit-scrollbar-thumb {
       line-height: initial;
       margin-top: 0.5rem;
       font-size: 0px;
-      margin: 0 0 0 1rem;
+      margin: 0 0 0 1.5rem;
       -webkit-transition: opacity 0.2s, font-size 0.3s;
       transition: opacity 0.2s, font-size 0.3s; }
       .left-menu .menu-link__heading.heading-show {
         opacity: 1;
         height: initial;
-        font-size: 14px;
+        font-size: 19px;
         padding-top: 0.4rem;
         -webkit-transition: opacity 0.2s, font-size 0.2s;
         transition: opacity 0.2s, font-size 0.2s; }
 
 .pushContent {
-  padding-left: 17.5rem; }
+  padding-left: 20rem; }
 
 .showLeftMenu {
-  width: 17.5rem; }
+  width: 20rem; }
 
 .showLeftMenu .hide {
   display: none; }
@@ -274,6 +276,15 @@ body::-webkit-scrollbar-thumb {
       -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.17);
       background-color: #ff8d8f; }
 
+ul.collapsible {
+  box-shadow: none;
+  border: none; }
+  ul.collapsible .collapsible-header {
+    padding: 0.5rem; }
+
+ul.collapsible > li {
+  margin-bottom: 0.5rem; }
+
 .form-block {
   background: #ffffff;
   border-radius: 1.5rem;
@@ -282,19 +293,25 @@ body::-webkit-scrollbar-thumb {
     color: #57ced3;
     font-size: 1.5rem;
     font-weight: 500;
-    margin-left: 1.5rem; }
+    margin: 0 0 0 0; }
   .form-block .inputs-container {
     margin-bottom: 0; }
     .form-block .inputs-container .input-field {
       margin-left: 1.5rem; }
   .form-block .gender-group__radio {
     margin-right: 1rem; }
+  .form-block .collapsible-body {
+    padding: 0;
+    background: #8cdde1;
+    background: linear-gradient(325deg, #8cdde1 35%, white 35%); }
 
 .profile-submit-btn {
   border-radius: 1rem;
-  width: 12rem;
+  width: 18rem;
+  display: block;
   background-color: #57ced3;
-  color: #ffffff; }
+  color: #ffffff;
+  margin: 0 auto; }
 
 .hidden {
   visibility: hidden;
@@ -450,7 +467,37 @@ body::-webkit-scrollbar-thumb {
     max-width: 85%;
     margin: 0 auto; }
   .shop-section__heading {
+    color: #fff;
     margin: 0.8rem 0; }
+  .shop-section .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  .shop-section .card .card-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18rem;
+    padding: 2rem; }
+  .shop-section .card .card-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 15rem;
+    max-width: 18rem; }
+  .shop-section .card .card-action {
+    padding: 1rem 0; }
+  .shop-section .card .card-content {
+    min-height: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #7d807b; }
+
+.shop-block {
+  border-radius: 4px;
+  padding: 1rem;
+  background: #8cdde1;
+  background: linear-gradient(45deg, #8cdde1 36%, white 36%); }
 
 .esa-container {
   display: flex;
@@ -460,37 +507,27 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
   padding: 0 0 2.5rem 0; }
 
-.esa-box {
-  width: 25rem;
-  text-align: center;
-  padding: 1rem;
-  background: transparent;
-  transition: all 0.2s;
-  border-radius: 10px; }
-  .esa-box:hover {
-    -webkit-box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28);
-    -moz-box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28);
-    box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28); }
-  .esa-box__link {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .esa-box__link:hover .link-arrow {
-      transform: translateX(0.25rem); }
-  .esa-box__text {
+.esa-link {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .esa-link:hover .link-arrow {
+    transform: translateX(0.25rem); }
+  .esa-link__text {
     color: #2b2b2b;
     margin: 0 0.6rem;
-    font-size: 1.2rem; }
-  .esa-box .link-icon, .esa-box .icon-checklist, .esa-box .icon-profile, .esa-box .icon-money, .esa-box .icon-box, .esa-box .icon-cart, .esa-box .icon-file, .esa-box .icon-edit, .esa-box .icon-msg, .esa-box .icon-palm, .esa-box .icon-signout {
+    font-size: 1rem; }
+  .esa-link .link-icon, .esa-link .icon-checklist, .esa-link .icon-profile, .esa-link .icon-money, .esa-link .icon-box, .esa-link .icon-cart, .esa-link .icon-file, .esa-link .icon-edit, .esa-link .icon-msg, .esa-link .icon-palm, .esa-link .icon-signout {
     display: inline-block;
     margin: 0;
-    width: 2.5rem;
-    height: 3rem;
-    background-size: 81.4%; }
-  .esa-box .bold {
+    width: 2.2rem;
+    height: 2rem;
+    background-size: 81.4%;
+    transition: all 0.2s; }
+  .esa-link .bold {
     font-weight: 500;
     color: #333333; }
-  .esa-box sup {
+  .esa-link sup {
     font-size: 0.75rem;
     padding-right: 5px; }
 
@@ -504,8 +541,10 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 601px) {
   .esa-box {
     padding: 1rem 0; }
-  .shop-section__container {
-    max-width: 95%; }
-  .shop-section__heading {
-    text-align: center;
-    margin-bottom: 2rem; } }
+  .shop-section {
+    padding: inherit; }
+    .shop-section__container {
+      max-width: 95%; }
+    .shop-section__heading {
+      text-align: center;
+      margin-bottom: 2rem; } }

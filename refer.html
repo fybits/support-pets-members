@@ -12,14 +12,34 @@
     />
     <link rel="stylesheet" href="./css/materialize.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NDSJLNN');
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
 
   <body>
-    <div class="friendbuy-ekG-rGC"></div>
-    <script>
-      window['friendbuy'] = window['friendbuy'] || [];
-      window['friendbuy'].push(['widget', 'ekG-rGC']);
-    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NDSJLNN"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="container-fluid main-wrapper">
       <header class="header">
         <!-- -------------------  Left menu ----------------------->
@@ -60,13 +80,13 @@
           </li>
           <li class="left-menu__item">
             <a
-              href="./shop.html"
+              href="./store.html"
               class="menu-link tooltipped"
               data-position="right"
-              data-tooltip="Shop"
+              data-tooltip="Store"
             >
               <span class="link-icon icon-cart"></span>
-              <span class="menu-link__heading">Shop</span>
+              <span class="menu-link__heading">Store</span>
             </a>
           </li>
           <li class="left-menu__item">
@@ -138,7 +158,11 @@
           <div class="container-fluid">
             <section class="shop-section">
               <div class="row form-block">
-                <h5>Refer a Friend</h5>
+                <div class="friendbuy-ekG-rGC"></div>
+                <script>
+                  window['friendbuy'] = window['friendbuy'] || [];
+                  window['friendbuy'].push(['widget', 'ekG-rGC']);
+                </script>
               </div>
             </section>
           </div>

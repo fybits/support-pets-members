@@ -6,6 +6,20 @@ $(document).ready(function() {
   $('select').formSelect();
   //Tooltips
   $('.tooltipped').tooltip();
+
+  let windowSize = $(window).width();
+
+  $(window).resize(() => (windowSize = $(window).width()));
+
+  if (windowSize > 1100) {
+    $('.openLeftMenu').toggleClass('rotate');
+    $('.left-menu-logo').toggleClass('large-logo');
+    $('.left-menu').addClass('showLeftMenu');
+    $('.main-wrapper').addClass('pushContent');
+    $('.menu-link__heading').addClass('heading-show');
+    //Removing tooltips
+    $('.tooltipped').tooltip('destroy');
+  }
   // Left menu actions
   $('.openLeftMenu').click(function() {
     $(this).toggleClass('rotate');
@@ -31,6 +45,11 @@ $(document).ready(function() {
     // maxDate: new Date(currYear - 5, 12, 31),
     yearRange: [1945, currYear - 1],
     format: 'dd/mm/yyyy'
+  });
+
+  //Tabs with forms
+  $('.collapsible').collapsible({
+    accordion: false
   });
 });
 

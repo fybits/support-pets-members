@@ -67,6 +67,7 @@
 .left-menu-logo.large-logo {
   background: url(../img/logo.png) no-repeat center;
   background-size: 90%;
+  padding: 3rem 16px !important;
 }
 
 .left-menu {
@@ -92,6 +93,7 @@
 
   .menu-link {
     display: flex;
+    align-items: center;
     padding: 1rem 0;
     height: auto;
     border-left: 4px solid transparent;
@@ -113,14 +115,14 @@
       line-height: initial;
       margin-top: 0.5rem;
       font-size: 0px;
-      margin: 0 0 0 1rem;
+      margin: 0 0 0 1.5rem;
       -webkit-transition: opacity 0.2s, font-size 0.3s;
       transition: opacity 0.2s, font-size 0.3s;
 
       &.heading-show {
         opacity: 1;
         height: initial;
-        font-size: 14px;
+        font-size: 19px;
         padding-top: 0.4rem;
         -webkit-transition: opacity 0.2s, font-size 0.2s;
         transition: opacity 0.2s, font-size 0.2s;
@@ -131,11 +133,11 @@
 
 // Js classes
 .pushContent {
-  padding-left: 17.5rem;
+  padding-left: 20rem;
 }
 
 .showLeftMenu {
-  width: 17.5rem;
+  width: 20rem;
 }
 
 .showLeftMenu .hide {

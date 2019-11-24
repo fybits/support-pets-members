@@ -10,8 +10,54 @@
   }
 
   &__heading {
+    color: #fff;
     margin: 0.8rem 0;
   }
+
+  .card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .card .card-image {
+    // border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18rem;
+    padding: 2rem;
+  }
+
+  .card .card-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 15rem;
+    max-width: 18rem;
+  }
+
+  .card .card-action {
+    padding: 1rem 0;
+  }
+
+  .card .card-content {
+    min-height: 6rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $grey;
+  }
+}
+
+.shop-block {
+  border-radius: 4px;
+  padding: 1rem;
+  background: rgb(140, 221, 225);
+  background: linear-gradient(
+    45deg,
+    rgba(140, 221, 225, 1) 36%,
+    rgba(255, 255, 255, 1) 36%
+  );
 }
 
 .esa-container {
@@ -23,42 +69,28 @@
   padding: 0 0 2.5rem 0;
 }
 
-.esa-box {
-  width: 25rem;
-  text-align: center;
-  padding: 1rem;
-  background: transparent;
-  transition: all 0.2s;
-  border-radius: 10px;
+.esa-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &:hover {
-    -webkit-box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28);
-    -moz-box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28);
-    box-shadow: inset 0px -200px 66px -200px rgba(87, 206, 211, 0.28);
-  }
-
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &:hover .link-arrow {
-      transform: translateX(0.25rem);
-    }
+  &:hover .link-arrow {
+    transform: translateX(0.25rem);
   }
 
   &__text {
     color: $black;
     margin: 0 0.6rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .link-icon {
     display: inline-block;
     margin: 0;
-    width: 2.5rem;
-    height: 3rem;
+    width: 2.2rem;
+    height: 2rem;
     background-size: 81.4%;
+    transition: all 0.2s;
   }
 
   .bold {
@@ -85,6 +117,7 @@
     padding: 1rem 0;
   }
   .shop-section {
+    padding: inherit;
     &__container {
       max-width: 95%;
     }
