@@ -545,6 +545,8 @@ ul.collapsible > li {
     padding: inherit; }
     .shop-section__container {
       max-width: 95%; }
-    .shop-section__heading {
-      text-align: center;
-      margin-bottom: 2rem; } }
+    .shop-section .shop-block {
+      border-radius: 4px;
+      padding: 1rem;
+      background: #8cdde1;
+      background: linear-gradient(45deg, #8cdde1 50%, white 50%); } }
