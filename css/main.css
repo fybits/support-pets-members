@@ -301,9 +301,7 @@ ul.collapsible > li {
   .form-block .gender-group__radio {
     margin-right: 1rem; }
   .form-block .collapsible-body {
-    padding: 0;
-    background: #8cdde1;
-    background: linear-gradient(325deg, #8cdde1 35%, white 35%); }
+    padding: 0; }
 
 .profile-submit-btn {
   border-radius: 1rem;
