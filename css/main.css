@@ -401,16 +401,16 @@ ul.collapsible > li {
         margin-bottom: 5px; }
     .login-section__right .right-footer {
       border: 1px solid; }
-  .login-section .signin-block {
+  .login-section .signup-block {
     max-width: 507px;
     color: #777777; }
-    .login-section .signin-block .signin-link {
+    .login-section .signup-block .signup-link {
       color: #57ced3;
       margin-left: 0.5rem;
       font-size: 1.14rem;
       border-bottom: 1px solid #ffff;
       transition: all 0.3s; }
-      .login-section .signin-block .signin-link:hover {
+      .login-section .signup-block .signup-link:hover {
         border-color: rgba(87, 206, 211, 0.5); }
 
 .login-form {
