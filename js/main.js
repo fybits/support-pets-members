@@ -1,6 +1,8 @@
 //for the datapicker
 const currYear = new Date().getFullYear();
 
+const apiUrl = 'http://104.248.191.131/sql/'
+
 $(document).ready(function() {
   //Select field
   $('select').formSelect();
@@ -44,14 +46,40 @@ $(document).ready(function() {
     // setDefaultDate: new Date(2000,01,31),
     // maxDate: new Date(currYear - 5, 12, 31),
     yearRange: [1945, currYear - 1],
-    format: 'dd/mm/yyyy'
+    format: 'mm/dd/yyyy'
   });
 
   //Tabs with forms
   $('.collapsible').collapsible({
     accordion: false
   });
+
+  loadUserInfo();
 });
+
+async function loadUserInfo() {
+  const response = await fetch(`${apiUrl}sql_get_contact_by_id.php`, {mode: 'no-cors'});
+  const json = await response.json();
+  // const json = JSON.parse('[{"contact_id":"2240","firstname":"Alex","lastname":"Sokolov","birthday":"2018-12-31","email":"alex.code.keen@gmail.com","gender":"1","is_over_18":"1"}]');
+  const userData = json[0];
+
+  const profileForm = $('#profile-form');
+
+  // Change birthday date format
+  userData.birthday = new Date(userData.birthday).toLocaleDateString('en-US');
+
+  // Update gender
+  let gender = userData.gender == 1 ? 'male' : 'female';
+  profileForm.find(`input[name="gender"][id="${gender}"`).attr('checked', true);
+  delete userData.gender;
+  
+  // Update other fields
+  Object.entries(userData).forEach(([key, value]) => {
+    profileForm.find(`#${key}`).val(value);
+    profileForm.find(`label[for="${key}"]`).toggleClass('active');
+    console.log(`${key}: ${value}`);
+  })
+}
 
 // Show picked photo of user's pet
 function readURL(input) {
