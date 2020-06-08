@@ -58,7 +58,7 @@ $(document).ready(function() {
 });
 
 async function loadUserInfo() {
-  const response = await fetch(`${apiUrl}sql_get_contact_by_id.php`, { mode: 'no-cors' });
+  const response = await fetch(`${apiUrl}sql_get_contact_by_id.php?id=2240`, { mode: 'no-cors' });
   const json = await response.json();
   // const json = JSON.parse('[{"contact_id":"2240","firstname":"Alex","lastname":"Sokolov","birthday":"2018-12-31","email":"alex.code.keen@gmail.com","gender":"1","is_over_18":"1"}]');
   const userData = json[0];
