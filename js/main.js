@@ -54,6 +54,13 @@ $(document).ready(function() {
     accordion: false
   });
 
+  const switchTo = prepareSections();
+  $('.menu-link').each(function () {
+    console.log($(this));
+    if ($(this).data('section')) {
+      $(this).click(() => switchTo($(this).data('section')));
+    }
+  });
   loadUserInfo();
 });
 
@@ -80,6 +87,20 @@ async function loadUserInfo() {
     profileForm.find(`#${key}`).val(value);
     profileForm.find(`label[for="${key}"]`).toggleClass('active');
   })
+}
+
+
+
+function prepareSections() {
+  let lastSection = 'profile-section';
+  $('.tab-section').addClass('hidden');
+  $(`#${lastSection}`).toggleClass('hidden');
+
+  return (sectionID) => {
+    $(`#${lastSection}`).addClass('hidden');
+    $(`#${sectionID}`).removeClass('hidden');
+    lastSection = sectionID;
+  }
 }
 
 // Show picked photo of user's pet
