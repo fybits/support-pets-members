@@ -94,45 +94,51 @@ async function loadUserInfo(userId) {
 }
 
 async function loadPetsInfo(userId) {
-  const response = await fetch(`${apiUrl}sql_get_pets_by_id.php?id=${userId}`, { mode: 'no-cors' });
-  const json = await response.json();
-  // const json = { list: [{ full: 'bruh bruh bruh', short: 'bruh', breed: 'bruh terier', weight: 6.9, staus: true }] };
-
-  const populateItem = (pet) => 
-    `<div class="carousel-item row"">\
-      <div class="col">\
-        <div class="card">\
-          <div class="card-image">\
-            <img src="img/cat.jpg">\
-            ${
-              pet.status ?
-                '<span class="card-badge red"><i class="material-icons">warning</i> ESA isn\'t active</span>'
-              :
-                '<span class="card-badge green"><i class="material-icons">done</i> ESA is active</span>'
-            }
-            <span class="card-title">${pet.full}</span>\
-          </div>\
-          <div class="card-content">\
-            <ul>\
-              <li class="short">${pet.short}</li>\
-              <li class="breed">${pet.breed}</li>\
-              <li class="weight">${pet.weight}</li>\
-            </ul>\
-          </div>\
-          <div class="card-action">\
-            <a href="#">Details</a>\
+  try {
+    const response = await fetch(`${apiUrl}sql_get_pets_by_id.php?id=${userId}`, { mode: 'no-cors' });
+    const json = await response.json();
+    // const json = [{ full: 'bruh bruh bruh', short: 'bruh', breed: 'bruh terier', weight: 6.9, staus: true }];
+    
+    const populateItem = (pet) => 
+      `<div class="carousel-item row"">\
+        <div class="col">\
+          <div class="card">\
+            <div class="card-image">\
+              <img src="img/cat.jpg">\
+              ${
+                pet.status ?
+                  '<span class="card-badge red"><i class="material-icons">warning</i> ESA isn\'t active</span>'
+                :
+                  '<span class="card-badge green"><i class="material-icons">done</i> ESA is active</span>'
+              }
+              <span class="card-title">${pet.full}</span>\
+            </div>\
+            <div class="card-content">\
+              <ul>\
+                <li class="short">${pet.short}</li>\
+                <li class="breed">${pet.breed}</li>\
+                <li class="weight">${pet.weight}</li>\
+              </ul>\
+            </div>\
+            <div class="card-action">\
+              <a href="#">Details</a>\
+            </div>\
           </div>\
         </div>\
-      </div>\
-    </div>`;
-
-  if (json.list.length > 0) {
-    const carousel = $('section#pets-section .carousel');
-    json.list.forEach((pet) => {
-      carousel.append(populateItem(pet))
-    });
+      </div>`;
+  
+    if (json.length > 0) {
+      const carousel = $('section#pets-section .carousel');
+      json.forEach((pet) => {
+        carousel.append(populateItem(pet))
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  } finally {
+    $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
   }
-  $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
+
 }
 
 function prepareSections() {
