@@ -55,17 +55,19 @@ $(document).ready(function() {
     accordion: false
   });
 
-  const userId = 2240;
-
-  loadUserInfo(userId);
-  loadPetsInfo(userId);
-
+  
+  $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
+  
   const switchTo = prepareSections();
   $('.menu-link').each(function () {
     if ($(this).data('section')) {
       $(this).click(() => switchTo($(this).data('section')));
     }
   });
+  
+  const userId = 2240;
+  loadUserInfo(userId);
+  loadPetsInfo(userId);
 });
 
 async function loadUserInfo(userId) {
@@ -135,8 +137,6 @@ async function loadPetsInfo(userId) {
     }
   } catch (error) {
     console.log(error);
-  } finally {
-    $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
   }
 
 }
