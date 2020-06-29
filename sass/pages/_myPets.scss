@@ -1,0 +1,59 @@
+@import '../tools/variables';
+
+.pets-section {
+  padding: 1rem 3rem;
+  max-width: 105rem;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  .carousel {
+    height: 500px;
+    .carousel-item {
+      width: 260px;
+      height: fit-content;
+      opacity: 1 !important;
+      .card-image {
+        .card-badge {
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          text-align: left;
+          text-transform: uppercase;
+          font-size: 0.9em;
+          padding: 0.2em 24px 0.8em 24px;
+          color: #fff;
+          z-index: 2;
+          .material-icons {
+            position:relative;
+            margin-right: 8px;
+            top: 7px;
+          }
+          + .card-title {
+            padding-bottom:66px;
+          }
+        }
+      }
+      .card-content {
+        ul {
+          margin: 0;
+        }
+        .status {
+          float: right;
+          i {
+            color: gray;
+          }
+          i.active {
+            color: $cian;
+          }
+        }
+      }
+      .card-action {
+        a {
+          color: $cian !important;
+          &:hover {
+            color: $pink !important;
+          }
+        }
+      }
+    }
+  }
+}

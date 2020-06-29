@@ -8,6 +8,7 @@ $(document).ready(function() {
   $('select').formSelect();
   //Tooltips
   $('.tooltipped').tooltip();
+  $('.nav-tooltipped').tooltip();
 
   let windowSize = $(window).width();
 
@@ -20,7 +21,7 @@ $(document).ready(function() {
     $('.main-wrapper').addClass('pushContent');
     $('.menu-link__heading').addClass('heading-show');
     //Removing tooltips
-    $('.tooltipped').tooltip('destroy');
+    $('.nav-tooltipped').tooltip('destroy');
   }
   // Left menu actions
   $('.openLeftMenu').click(function() {
@@ -31,13 +32,13 @@ $(document).ready(function() {
       $('.main-wrapper').addClass('pushContent');
       $('.menu-link__heading').addClass('heading-show');
       //Removing tooltips
-      $('.tooltipped').tooltip('destroy');
+      $('.nav-tooltipped').tooltip('destroy');
     } else {
       $('.left-menu').removeClass('showLeftMenu');
       $('.main-wrapper').removeClass('pushContent');
       $('.menu-link__heading').removeClass('heading-show');
       //Adding tooltips
-      $('.tooltipped').tooltip();
+      $('.nav-tooltipped').tooltip();
     }
   });
   // Datepiker settings (see materialize documentation)
@@ -53,6 +54,8 @@ $(document).ready(function() {
   $('.collapsible').collapsible({
     accordion: false
   });
+
+  $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
 
   const switchTo = prepareSections();
   $('.menu-link').each(function () {

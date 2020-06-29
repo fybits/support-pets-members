@@ -190,149 +190,6 @@ body::-webkit-scrollbar-thumb {
   .pushContent {
     padding-left: 0; } }
 
-.m-top-5 {
-  margin-top: 5rem; }
-
-.m-top-3 {
-  margin-top: 3rem; }
-
-.m-y-0 {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.mt8 {
-  margin-top: 8%; }
-
-.profile {
-  padding: 1rem 3rem;
-  max-width: 105rem;
-  margin: 0 auto;
-  font-family: 'Montserrat', sans-serif; }
-
-.profile-head {
-  border-radius: 1.5rem;
-  background-color: #cbd5df; }
-  .profile-head__welcome {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #57ced3;
-    font-size: 2rem;
-    text-align: center; }
-    .profile-head__welcome span {
-      display: block; }
-
-.profile-picture img {
-  width: 100%;
-  max-width: 31.5rem;
-  height: auto; }
-
-.profile-photo {
-  max-height: 20rem; }
-  .profile-photo__pic {
-    background: #ffffff;
-    min-height: 19rem;
-    max-width: 22rem;
-    min-width: 15rem;
-    border-radius: 1.5rem;
-    padding-top: 0.1rem;
-    text-align: center; }
-  .profile-photo .pic-pre {
-    text-align: center;
-    color: #777777;
-    font-weight: 400;
-    font-size: 1.1rem;
-    margin: 1rem 0 0.5rem; }
-  .profile-photo .pic-edit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    min-height: 13rem;
-    max-width: 19rem;
-    margin: 0 auto;
-    background: url(../img/icons/icon-circle.svg) no-repeat center/12rem, url(../img/icons/icon-palm.svg) no-repeat center; }
-    .profile-photo .pic-edit img {
-      width: 100%;
-      max-width: 15rem;
-      margin-bottom: 1.5rem;
-      height: auto; }
-  .profile-photo .edit-sign {
-    border-radius: 50%;
-    height: 2.5rem;
-    width: 2.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #57ced3;
-    color: #ffffff;
-    font-size: 3rem;
-    font-weight: 500;
-    position: absolute;
-    bottom: 10%;
-    right: 18%;
-    transition: all 0.3s;
-    cursor: pointer; }
-    .profile-photo .edit-sign:hover {
-      -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.17);
-      background-color: #ff8d8f; }
-
-ul.collapsible {
-  box-shadow: none;
-  border: none; }
-  ul.collapsible .collapsible-header {
-    padding: 0.5rem; }
-
-ul.collapsible > li {
-  margin-bottom: 0.5rem; }
-
-.form-block {
-  background: #ffffff;
-  border-radius: 1.5rem;
-  padding: 1rem !important; }
-  .form-block__heading {
-    color: #57ced3;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 0 0 0 0; }
-  .form-block .inputs-container {
-    margin-bottom: 0; }
-    .form-block .inputs-container .input-field {
-      margin-left: 1.5rem; }
-  .form-block .gender-group__radio {
-    margin-right: 1rem; }
-  .form-block .collapsible-body {
-    padding: 0; }
-
-.profile-submit-btn {
-  border-radius: 1rem;
-  width: 18rem;
-  display: block;
-  background-color: #57ced3;
-  color: #ffffff;
-  margin: 0 auto; }
-
-.hidden {
-  visibility: hidden;
-  display: none; }
-
-@media only screen and (max-width: 601px) {
-  .profile {
-    padding: 1rem 1.5rem; }
-  .profile-head__welcome {
-    font-size: 2rem; }
-  .profile-photo__pic {
-    margin: 0 auto; }
-  .profile-submit-btn {
-    margin: 0 auto;
-    display: block;
-    width: 100%; }
-  .form-block__heading {
-    margin: 0.5rem 0 0.2rem 1.5rem; }
-  .form-block .inputs-container .input-field {
-    margin-bottom: 0; }
-  .form-block .gender-group__radio {
-    margin-right: 1rem; } }
-
 .footer {
   background-color: #e3817d;
   padding: 1.3rem 0;
@@ -548,3 +405,186 @@ ul.collapsible > li {
       padding: 1rem;
       background: #8cdde1;
       background: linear-gradient(45deg, #8cdde1 50%, white 50%); } }
+
+.m-top-5 {
+  margin-top: 5rem; }
+
+.m-top-3 {
+  margin-top: 3rem; }
+
+.m-y-0 {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.mt8 {
+  margin-top: 8%; }
+
+.profile-section {
+  padding: 1rem 3rem;
+  max-width: 105rem;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif; }
+
+.profile-head {
+  border-radius: 1.5rem;
+  background-color: #cbd5df; }
+  .profile-head__welcome {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #57ced3;
+    font-size: 2rem;
+    text-align: center; }
+    .profile-head__welcome span {
+      display: block; }
+
+.profile-picture img {
+  width: 100%;
+  max-width: 31.5rem;
+  height: auto; }
+
+.profile-photo {
+  max-height: 20rem; }
+  .profile-photo__pic {
+    background: #ffffff;
+    min-height: 19rem;
+    max-width: 22rem;
+    min-width: 15rem;
+    border-radius: 1.5rem;
+    padding-top: 0.1rem;
+    text-align: center; }
+  .profile-photo .pic-pre {
+    text-align: center;
+    color: #777777;
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: 1rem 0 0.5rem; }
+  .profile-photo .pic-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 13rem;
+    max-width: 19rem;
+    margin: 0 auto;
+    background: url(../img/icons/icon-circle.svg) no-repeat center/12rem, url(../img/icons/icon-palm.svg) no-repeat center; }
+    .profile-photo .pic-edit img {
+      width: 100%;
+      max-width: 15rem;
+      margin-bottom: 1.5rem;
+      height: auto; }
+  .profile-photo .edit-sign {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #57ced3;
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 10%;
+    right: 18%;
+    transition: all 0.3s;
+    cursor: pointer; }
+    .profile-photo .edit-sign:hover {
+      -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.17);
+      background-color: #ff8d8f; }
+
+ul.collapsible {
+  box-shadow: none;
+  border: none; }
+  ul.collapsible .collapsible-header {
+    padding: 0.5rem; }
+
+ul.collapsible > li {
+  margin-bottom: 0.5rem; }
+
+.form-block {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 1rem !important; }
+  .form-block__heading {
+    color: #57ced3;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0 0 0 0; }
+  .form-block .inputs-container {
+    margin-bottom: 0; }
+    .form-block .inputs-container .input-field {
+      margin-left: 1.5rem; }
+  .form-block .gender-group__radio {
+    margin-right: 1rem; }
+  .form-block .collapsible-body {
+    padding: 0; }
+
+.profile-submit-btn {
+  border-radius: 1rem;
+  width: 18rem;
+  display: block;
+  background-color: #57ced3;
+  color: #ffffff;
+  margin: 0 auto; }
+
+.hidden {
+  visibility: hidden;
+  display: none; }
+
+@media only screen and (max-width: 601px) {
+  .profile {
+    padding: 1rem 1.5rem; }
+  .profile-head__welcome {
+    font-size: 2rem; }
+  .profile-photo__pic {
+    margin: 0 auto; }
+  .profile-submit-btn {
+    margin: 0 auto;
+    display: block;
+    width: 100%; }
+  .form-block__heading {
+    margin: 0.5rem 0 0.2rem 1.5rem; }
+  .form-block .inputs-container .input-field {
+    margin-bottom: 0; }
+  .form-block .gender-group__radio {
+    margin-right: 1rem; } }
+
+.pets-section {
+  padding: 1rem 3rem;
+  max-width: 105rem;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif; }
+  .pets-section .carousel {
+    height: 500px; }
+    .pets-section .carousel .carousel-item {
+      width: 260px;
+      height: fit-content;
+      opacity: 1 !important; }
+      .pets-section .carousel .carousel-item .card-image .card-badge {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        padding: 0.2em 24px 0.8em 24px;
+        color: #fff;
+        z-index: 2; }
+        .pets-section .carousel .carousel-item .card-image .card-badge .material-icons {
+          position: relative;
+          margin-right: 8px;
+          top: 7px; }
+        .pets-section .carousel .carousel-item .card-image .card-badge + .card-title {
+          padding-bottom: 66px; }
+      .pets-section .carousel .carousel-item .card-content ul {
+        margin: 0; }
+      .pets-section .carousel .carousel-item .card-content .status {
+        float: right; }
+        .pets-section .carousel .carousel-item .card-content .status i {
+          color: gray; }
+        .pets-section .carousel .carousel-item .card-content .status i.active {
+          color: #57ced3; }
+      .pets-section .carousel .carousel-item .card-action a {
+        color: #57ced3 !important; }
+        .pets-section .carousel .carousel-item .card-action a:hover {
+          color: #ff8d8f !important; }
