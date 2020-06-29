@@ -211,12 +211,12 @@ body::-webkit-scrollbar-thumb {
 
 .profile-head {
   border-radius: 1.5rem;
-  height: 15rem;
   background-color: #cbd5df; }
   .profile-head__welcome {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: #ff8d8f;
+    color: #57ced3;
+    font-size: 2rem;
     text-align: center; }
     .profile-head__welcome span {
       display: block; }

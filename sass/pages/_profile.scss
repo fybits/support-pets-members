@@ -21,13 +21,13 @@
 }
 .profile-head {
   border-radius: 1.5rem;
-  height: 15rem;
   background-color: #cbd5df;
 
   &__welcome {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    color: $pink;
+    color: $cian;
+    font-size: 2rem;
     text-align: center;
     span {
       display: block;
