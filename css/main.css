@@ -578,12 +578,6 @@ ul.collapsible > li {
           padding-bottom: 50px; }
       .pets-section .carousel .carousel-item .card-content ul {
         margin: 0; }
-      .pets-section .carousel .carousel-item .card-content .status {
-        float: right; }
-        .pets-section .carousel .carousel-item .card-content .status i {
-          color: gray; }
-        .pets-section .carousel .carousel-item .card-content .status i.active {
-          color: #57ced3; }
       .pets-section .carousel .carousel-item .card-action a {
         color: #57ced3 !important; }
         .pets-section .carousel .carousel-item .card-action a:hover {

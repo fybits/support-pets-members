@@ -36,15 +36,6 @@
         ul {
           margin: 0;
         }
-        .status {
-          float: right;
-          i {
-            color: gray;
-          }
-          i.active {
-            color: $cian;
-          }
-        }
       }
       .card-action {
         a {
