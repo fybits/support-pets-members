@@ -56,9 +56,9 @@ $(document).ready(function() {
   });
 
   
-  $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
+  // $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
   
-  const switchTo = prepareSections();
+  const switchTo = prepareSections({ ['pets-section']: () => $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 }) });
   $('.menu-link').each(function () {
     if ($(this).data('section')) {
       $(this).click(() => switchTo($(this).data('section')));
@@ -129,19 +129,20 @@ async function loadPetsInfo(userId) {
         </div>\
       </div>`;
   
-    if (json.length > 0) {
-      const carousel = $('section#pets-section .carousel');
-      json.forEach((pet) => {
-        carousel.append(populateItem(pet))
+      if (json.length > 0) {
+        const carousel = $('section#pets-section .carousel');
+        json.forEach((pet) => {
+          carousel.append(populateItem(pet))
       });
     }
+    $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
   } catch (error) {
     console.log(error);
   }
 
 }
 
-function prepareSections() {
+function prepareSections(callbacks) {
   let lastSection = 'profile-section';
   $('.tab-section').addClass('hidden');
   $(`#${lastSection}`).toggleClass('hidden');
@@ -149,6 +150,7 @@ function prepareSections() {
   return (sectionID) => {
     $(`#${lastSection}`).addClass('hidden');
     $(`#${sectionID}`).removeClass('hidden');
+    if (callbacks[sectionID]) callbacks[sectionID]();
     lastSection = sectionID;
   }
 }
