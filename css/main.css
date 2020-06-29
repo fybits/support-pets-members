@@ -558,8 +558,7 @@ ul.collapsible > li {
     height: 500px; }
     .pets-section .carousel .carousel-item {
       width: 260px;
-      height: fit-content;
-      opacity: 1 !important; }
+      height: fit-content; }
       .pets-section .carousel .carousel-item .card-image .card-badge {
         position: absolute;
         bottom: 0px;

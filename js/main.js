@@ -55,20 +55,21 @@ $(document).ready(function() {
     accordion: false
   });
 
-  $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
+  const userId = 2240;
+
+  loadUserInfo(userId);
+  loadPetsInfo(userId);
 
   const switchTo = prepareSections();
   $('.menu-link').each(function () {
-    console.log($(this));
     if ($(this).data('section')) {
       $(this).click(() => switchTo($(this).data('section')));
     }
   });
-  loadUserInfo();
 });
 
-async function loadUserInfo() {
-  const response = await fetch(`${apiUrl}sql_get_contact_by_id.php?id=2240`, { mode: 'no-cors' });
+async function loadUserInfo(userId) {
+  const response = await fetch(`${apiUrl}sql_get_contact_by_id.php?id=${userId}`, { mode: 'no-cors' });
   const json = await response.json();
   // const json = JSON.parse('[{"contact_id":"2240","firstname":"Alex","lastname":"Sokolov","birthday":"2018-12-31","email":"alex.code.keen@gmail.com","gender":"1","is_over_18":"1"}]');
   const userData = json[0];
@@ -92,7 +93,47 @@ async function loadUserInfo() {
   })
 }
 
+async function loadPetsInfo(userId) {
+  const response = await fetch(`${apiUrl}sql_get_pets_by_id.php?id=${userId}`, { mode: 'no-cors' });
+  const json = await response.json();
+  // const json = { list: [{ full: 'bruh bruh bruh', short: 'bruh', breed: 'bruh terier', weight: 6.9, staus: true }] };
 
+  const populateItem = (pet) => 
+    `<div class="carousel-item row"">\
+      <div class="col">\
+        <div class="card">\
+          <div class="card-image">\
+            <img src="img/cat.jpg">\
+            ${
+              pet.status ?
+                '<span class="card-badge red"><i class="material-icons">warning</i> ESA isn\'t active</span>'
+              :
+                '<span class="card-badge green"><i class="material-icons">done</i> ESA is active</span>'
+            }
+            <span class="card-title">${pet.full}</span>\
+          </div>\
+          <div class="card-content">\
+            <ul>\
+              <li class="short">${pet.short}</li>\
+              <li class="breed">${pet.breed}</li>\
+              <li class="weight">${pet.weight}</li>\
+            </ul>\
+          </div>\
+          <div class="card-action">\
+            <a href="#">Details</a>\
+          </div>\
+        </div>\
+      </div>\
+    </div>`;
+
+  if (json.list.length > 0) {
+    const carousel = $('section#pets-section .carousel');
+    json.list.forEach((pet) => {
+      carousel.append(populateItem(pet))
+    });
+  }
+  $('.carousel').carousel({ noWrap: true, dist: 0, shift: 0 });
+}
 
 function prepareSections() {
   let lastSection = 'profile-section';
